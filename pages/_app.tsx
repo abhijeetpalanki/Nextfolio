@@ -18,9 +18,7 @@ function MyApp({ Component, pageProps, router }) {
         </div>
         <div className="flex flex-col col-span-12 overflow-hidden bg-white shadow-custom-light dark:shadow-custom-dark rounded-2xl lg:col-span-9 dark:bg-dark-500">
           <Navbar />
-          <AnimatePresence exitBeforeEnter initial={false}>
-            <Component {...pageProps} key={router.route} />
-          </AnimatePresence>
+          <Component {...pageProps} key={router.route} />
         </div>
       </div>
     </ThemeProvider>
